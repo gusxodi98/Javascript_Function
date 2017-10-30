@@ -5,18 +5,18 @@
        
        function sum(lo, hi) {
          var result = 0;
-        if(lo>=hi)
-	 for(lo; lo<=hi;lo++){
-		result += lo;
+        if(lo<=hi){
+	 for(var a =lo; a<=hi;a++)
+		result += a;
 		}
 	else{
-	for(hi; hi<=lo ; hi++){
-	result += hi;
-		}
+	for(var a = hi; a<=lo ; a++)
+	result += a;	
 	}
          return result;
        }
 
+	   
        exepect(sum(1, 2), 3);
        exepect(sum(1, 1), 1);
        exepect(sum(1, 100), 5050);
@@ -24,7 +24,6 @@
        exepect(sum(200, 1000), 480600);
        exepect(sum(100, 1), 5050);
        exepect(sum(1000, 200), 480600);
-
        function exepect(l, r) {
          if (l === r)
           console.log('pass');
