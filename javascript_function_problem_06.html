@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+    
+
+      function print_scores_chart(){
+     
+        var star = "";
+   
+        for (var i = 0; i < arguments.length; i++) {
+            star += "--";
+        }
+        star += "\n";
+        
+	for (var j = 10; j > 0; j--) {
+            for (var k = 0; k < arguments.length; k++) {
+                if (arguments[k] >= i) {
+                    star += "*";
+                } else star += " ";
+            }
+            star += "\n";
+        }
+        for (var q = 0; q < arguments.length; q++) {
+            star += "--";
+        }
+        console.log(star);
+      }
+      print_scores_chart(1, 2, 3, 4, 5);
+      print_scores_chart(10, 1, 10, 1, 5, 5);
+      print_scores_chart(5, 2, 2, 9, 3, 5, 9);
+
+   	 </script>
+	</head>
+<body>
+</body>
+</html>
